@@ -1,1 +1,1 @@
-# BrickBreaker
+# Lola Richardson's Brick Breaker Clone
