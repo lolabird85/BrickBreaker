@@ -18,7 +18,7 @@ public class BallBehavior : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Paddle"))
         {
-            if (!Mathf.Approximately(collision.rigidbody.linearVelocityY, 0.0f))
+            if (!Mathf.Approximately(collision.rigidbody.linearVelocityX, 0.0f))
             {
                 Debug.Log("Collision with paddle :D");
                 Vector2 direction = _rb.linearVelocity * (1 - _paddleInfluence)
