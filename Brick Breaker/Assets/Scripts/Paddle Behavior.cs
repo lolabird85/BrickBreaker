@@ -2,49 +2,37 @@ using UnityEngine;
 
 public class PaddleBehavior : MonoBehaviour
 {
-    public float Speed = 5.0f;
-        
-    public KeyCode LeftDirection = KeyCode.LeftArrow;
-    public KeyCode RightDirection = KeyCode.RightArrow;
-    public Transform PaddlePosition;
+    private float _direction;
+    
+    [SerializeField] float _speed = 5.0f;
+
+    [SerializeField] KeyCode _leftDirection = KeyCode.LeftArrow;
+    [SerializeField] KeyCode _rightDirection = KeyCode.RightArrow;
+    
+    private Rigidbody2D _rb;
 
     void Start()
     {
-        PaddlePosition = GameObject.Find("Paddle").GetComponent<Transform>();
+        _rb = GetComponent<Rigidbody2D>();
+    }
+
+    private void FixedUpdate()
+    {
+        _rb.linearVelocityX = _direction * _speed;
     }
     
     void Update()
     {
-        float movement = 0.0f;
+        _direction = 0.0f;
         
-        if (Input.GetKey(LeftDirection))
+        if (Input.GetKey(_leftDirection))
         {
-            movement -= Speed;
+            _direction -= 1.0f;
         }
 
-        if (Input.GetKey(RightDirection))
+        if (Input.GetKey(_rightDirection))
         {
-            movement += Speed;
-        }
-
-        movement *= Time.deltaTime;
-        transform.Translate(movement, 0.0f, 0.0f);
-        
-        //I tried to set a boundary for the level using transform
-        //This is my progress so far
-        //I wanted to do an if statement that if the paddle reached a certain position, I'd stop it from moving farther
-        //I couldn't get it to work without making the paddle unable to move completely
-        if (PaddlePosition.position.x >= 5.0f)
-        {
-            if (Input.GetKey(RightDirection))
-            {
-            }
-        }
-        else if (PaddlePosition.position.x <= -5.0f)
-        {
-            if (Input.GetKey(LeftDirection))
-            {
-            }
+            _direction += 1.0f;
         }
     }
 }
