@@ -6,8 +6,9 @@ public class BrickBehavior : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Ball"))
         {
-            Destroy(gameObject);
             Debug.Log("Got hit!");
+            Destroy(gameObject, 0.09f);
+            GameBehavior.Instance.ScorePoint();
         } 
     }
 }
