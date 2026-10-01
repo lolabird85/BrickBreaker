@@ -3,6 +3,9 @@ using TMPro;
 
 public class GameBehavior : MonoBehaviour
 {
+    // I could not figure out how to implement destruction and instantiation in the manager.
+    // Also, I have no idea why the score goes up by 2 when the bricks are destroyed
+    // except for in the far left column.
     public static GameBehavior Instance;
     [SerializeField] TMP_Text _scoreUI;
     
