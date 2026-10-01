@@ -42,6 +42,7 @@ public class GameBehavior : MonoBehaviour
     public void ResetGame()
     {
         Score = 0;
+        _scoreUI.SetText(Score.ToString());
     }
     
     public void ScorePoint()
