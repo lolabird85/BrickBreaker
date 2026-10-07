@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3061322667239587153}
   - component: {fileID: 6884008638689601022}
-  - component: {fileID: 451251627787039455}
   - component: {fileID: -3944784281628549541}
+  - component: {fileID: -5002979323061106560}
   m_Layer: 0
   m_Name: Brick
   m_TagString: Brick
@@ -93,18 +93,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!114 &451251627787039455
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1777105345548493630}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f21827f58b31548748a73dbe9849eaa6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::BrickBehavior
 --- !u!61 &-3944784281628549541
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -151,3 +139,20 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &-5002979323061106560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1777105345548493630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f21827f58b31548748a73dbe9849eaa6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BrickBehavior
+  Colors:
+  - {r: 0.0110804355, g: 0.7830189, b: 0.5236958, a: 1}
+  - {r: 1, g: 0.59700966, b: 0.50980395, a: 1}
+  - {r: 0.98039216, g: 0.44705886, b: 0.5699012, a: 1}
+  - {r: 0, g: 0, b: 0, a: 0}
