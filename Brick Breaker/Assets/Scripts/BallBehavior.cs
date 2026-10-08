@@ -79,6 +79,7 @@ public class BallBehavior : MonoBehaviour
     private void ResetBall()
     {
         Vector2 direction = Random.onUnitCircle;
+        direction.y = Mathf.Abs(direction.y);
         CheckSteepness(ref direction);
         _rb.AddForce(direction * _launchForce, ForceMode2D.Impulse);
     }

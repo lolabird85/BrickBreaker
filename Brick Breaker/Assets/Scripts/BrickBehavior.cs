@@ -17,10 +17,12 @@ public class BrickBehavior : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Ball"))
         {
-            _hitNumber++;
-            _spriteRenderer.color = Colors[_hitNumber];
-            
-            if (_hitNumber == 3)
+            if (_hitNumber <= 1)
+            {
+                _hitNumber++;
+                _spriteRenderer.color = Colors[_hitNumber];
+            }
+            else
             {
                 Debug.Log("Got hit!");
                 Destroy(gameObject, 0.09f);

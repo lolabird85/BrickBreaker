@@ -87,7 +87,7 @@ public class GameBehavior : MonoBehaviour
     }
     public void ResetPoint()
     {
-        _ball = Instantiate(_ballPrefab, new Vector3(0.0f, -0.6f, 0.0f), Quaternion.identity, _ballParent);
+        _ball = Instantiate(_ballPrefab, new Vector3(0.0f, -3.0f, 0.0f), Quaternion.identity, _ballParent);
         _brick = Instantiate(_brickPrefab, new Vector3(0.0f, 0.5f, 0.0f), Quaternion.identity, _brickParent);
     }
 }
